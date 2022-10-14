@@ -17,7 +17,7 @@ body{
 
 }
 .primary-btn{
-	background: linear-gradient(96.14deg, #3A8EF6 -10.84%, #6F3AFA 196.74%);
+	background: rgb(74, 117, 248,);
 	box-shadow: 0px 8px 23px rgba(65, 132, 247, 0.24);
 	border-radius: 100px;
 	padding: 16px 28px;
@@ -33,6 +33,15 @@ body{
 	/* White' */
 	cursor: pointer;
 	color: #FFFFFF;
+	-webkit-transition: all .3s;
+	
+	&:hover{
+		background:#fff;
+		color: #3A8EF6;
+	}
+	&:hover path{
+		stroke: #3A8EF6;
+	}
 }
 .primary-title {
 	font-family: 'Poppins', "Open Sans", sans-serif;
@@ -150,7 +159,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 	&__btn {
 		margin-top: 40px;
-		background: linear-gradient(96.14deg, #3A8EF6 -10.84%, #6F3AFA 196.74%);
+		// background: linear-gradient(96.14deg, #3A8EF6 -10.84%, #6F3AFA 196.74%);
 		box-shadow: 0px 8px 23px rgba(65, 132, 247, 0.24);
 		border-radius: 100px;
 		padding: 16px 28px;
@@ -165,7 +174,7 @@ h1, h2, h3, h4, h5, h6, p {
 		font-size: 18px;
 		line-height: 23px;
 		/* identical to box height */
-
+		gap: 13px;
 		display: flex;
 		align-items: center;
 
@@ -767,24 +776,21 @@ h1, h2, h3, h4, h5, h6, p {
 	// .discount-banner__btn
 
 	&__btn {
-		
-		&:first-child{
-			border: 1px solid #FFFFFF;
-			filter: drop-shadow(0px 8px 23px rgba(65, 132, 247, 0.24));
-			border-radius: 100px;
-			background: transparent;
-			font-weight: 600;
-			gap: 8px;
-		}
-		&:last-child{
-			background: #FFFFFF;
-			box-shadow: 0px 8px 23px rgba(65, 132, 247, 0.24);
-			border-radius: 100px;
-			font-weight: 600;
-			gap:8px;
+		border: 1px solid #FFFFFF;
+		box-shadow: 0px 8px 23px rgba(65, 132, 247, 0.24);
+		border-radius: 100px;
+		background: transparent;
+		font-weight: 600;
+		gap: 8px;
+		transition: all .3s;
+		&:hover{
+			background-color: #FFF;
 			color: #3A8EF6;
-
 		}
+		&:hover path{
+			stroke: #3A8EF6;
+		}
+		
 	}
 }
 
