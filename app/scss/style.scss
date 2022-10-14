@@ -1129,6 +1129,12 @@ h1, h2, h3, h4, h5, h6, p {
 		letter-spacing: -0.01em;
 
 		color: #2076FF;
+		transition: all .3s;
+		&:hover{
+			color: #fff;
+			background-color: rgba(32, 118, 255, 1);
+			border: 1px solid #fff;
+		}
 	}
 }
 
