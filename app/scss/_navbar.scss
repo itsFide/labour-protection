@@ -98,10 +98,15 @@ nav {
   justify-content: center;
   align-items: center;
 }
-
+.mobile__menu{
+  display: none;
+}
 // Тут указываем тот брейкпоинт, на котором нам нужно прятать обычное меню и показывать уже бургер.
 // Так же это значение ставим в файле navbar.js
-@media screen and (max-width:768px) {
+@media screen and (max-width:1050px) {
+    nav .navbar{
+      padding: 10px 30px 10px 30px !important;
+    }
     .burger {
       display: block;
       position: relative;
@@ -111,13 +116,13 @@ nav {
       cursor: pointer;
       &.active-burger {
         &:before {
-          background: rgb(0, 0, 0);
+          background: #467AF7;
           transform: rotate(45deg);
           transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all; 
           top: 8px;
         }
         &:after {
-          background: rgb(0, 0, 0);
+          background: #467AF7;
           transform: rotate(-45deg);
           bottom: 10px;
           transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all;
@@ -131,7 +136,7 @@ nav {
         position: absolute;
         height: 2px;
         width: 100%;
-        background: white;
+        background: #467AF7;
         transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all;
       }
       &:before {
@@ -145,22 +150,39 @@ nav {
             top: 9px;
             right: 0;
             width: 100%;
-            background: white;
+            background: #467AF7;
             height: 2px;
             transform: scale(1);
             transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .3s all;
           }
     }
-    .menu__list{
+    .menu{
+      display: none !important; 
+    }
+    .mobile__menu{
+      display: block;
       position: absolute;
-      top: -100%;
-      &-item {
-        margin-right: 0 !important;
-         a {
-          color: black;
-        }
+      width: 100%;
+      height: 0;
+      padding: 0;
+      z-index: 10;
+      top: 95px;
+      overflow-y: hidden;
+      transition: all 0.4s;
+      right: 0;
+      background-color: #fff;
+      & .menu__list{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      
+      & .navbar__contact-btn{
+        margin-top: 0;
+        display: flex !important;
       }
     }
+    .navbar__contact-btn{display: none !important;}
 }
 
 

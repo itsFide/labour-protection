@@ -1,12 +1,15 @@
 // Модальное окно
 function bindModal(trigger, modal, close) {
-    trigger = document.querySelector(trigger),
+    trigger = document.querySelectorAll(trigger),
     modal = document.querySelector(modal),
     close = document.querySelector(close)
-    trigger.addEventListener('click', e => {
-      e.preventDefault()
-      modal.style.display = 'flex'
-    });
+    trigger.forEach((event)=>{
+      event.addEventListener('click', e => {
+        e.preventDefault()
+        modal.style.display = 'flex'
+      });
+    })
+    
     close.addEventListener('click', () => {
       modal.style.display = 'none'
     });

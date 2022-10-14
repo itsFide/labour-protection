@@ -65,9 +65,7 @@ gulp.task('images', async function(){
 gulp.task('js', function(){
   return gulp.src([
     './app/js/navbar.js',
-    './app/js/phonemask.js',
-    './app/js/accordion.js',
-    './app/js/tabs.js',
+    './app/js/modals.js',
     './app/js/main.js'
   ])
     .pipe(babel({

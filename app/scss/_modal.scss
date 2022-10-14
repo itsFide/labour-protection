@@ -10,34 +10,105 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    z-index: 103;
     display: none;
         .modal {
-            background: white;
-            padding: 25px;
-            border-radius: 5px;
-            height: 350px;
-            width: 300px;
+            background: #F4F4F4;
+            border: 1px solid #C5C5C5;
+            border-radius: 25px;
+            padding: 44px 0 63px 0;
+            width: 650px;
+            display: flex;
+            justify-content: center;
+            // min-height: 100%;
+            // overflow-y: scroll;
+            &__inner{
+                width: 403px;
+            }
+            &__access__descr{
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 22px;
+                /* identical to box height */
+                text-align: center;
+                margin-top: 18px;
+                letter-spacing: -0.01em;
+
+                color: #545454;
+
+            }
+            &__access__img{
+                display: flex;
+                justify-content: center;
+                margin-top: 33px;
+            }
+            &__form__btn{
+                border: none;
+                outline: none;
+                gap: 8px;
+                margin-top: 37px;
+            }
                 &__title {
                     text-align: center;
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 32px;
+                    line-height: 39px;
+                    text-align: center;
+                    letter-spacing: -0.01em;
+
+                    color: #545454;
                 }
                 &__close{
                     cursor: pointer;
                     display: flex;
                     justify-content: flex-end;
                 }
+                &__body{
+                    & form{
+                        margin-top: 30px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        & input{
+                            background: #EEEEEE;
+                            border: 1px solid #B3B3B3;
+                            border-radius: 25px;
+                            padding: 25px;
+                            outline: none;
+                            width: 310px;
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 15px;
+                            /* identical to box height */
+
+                            letter-spacing: -0.01em;
+
+                            color: #545454;
+                        }
+                        & label{
+                            margin-bottom: 8px;
+                        }
+                        & label p{
+                            font-family: 'Inter';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 12px;
+                            line-height: 15px;
+                            /* identical to box height */
+                            margin-bottom: 9px;
+                            letter-spacing: -0.01em;
+                            padding-left: 25px;
+                            color: #545454;
+                        }
+                    }
+                }
         }
 }
 
 // ************************ Кнопка вызова модального окна ************************ //
-.modal__btn  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    border-radius: 30px;
-    height: 50px;
-    width: 150px;
-    cursor: pointer;
-}
-
