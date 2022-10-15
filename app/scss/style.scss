@@ -1068,6 +1068,9 @@ h1, h2, h3, h4, h5, h6, p {
 		border-radius: 14px;
 		padding: 12px 14px 20px 14px;
 		width: 253px;
+		&__img img{
+			border-radius: 12px;
+		}
 	}
 	&__item__title{
 	margin-top: 18px;	
